@@ -38,7 +38,7 @@
       "thunderbolt"
     ];
     initrd.kernelModules = [ "amdgpu" ];
-    kernelModules = [ "kvm-intel" "intel_rapl"] ];
+    kernelModules = [ "kvm-intel" "intel_rapl" ];
     extraModulePackages = [ ];
 
     kernelParams = [
