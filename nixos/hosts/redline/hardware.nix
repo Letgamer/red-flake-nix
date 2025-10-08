@@ -6,11 +6,6 @@
   ...
 }:
 {
-  imports = [
-    inputs.hardware.nixosModules.common-cpu-intel-cpu-only
-    inputs.hardware.nixosModules.common-gpu-amd
-    inputs.hardware.nixosModules.common-pc-ssd
-  ];
 
   custom = {
     # disable ZFS encryption
@@ -59,6 +54,7 @@
     cpu.intel.updateMicrocode = true;
 
     amdgpu.opencl.enable = true; # Proprietary AMD OpenCL support
+    amdgpu.initrd.enable = true; # Enable Initrd support
 
     graphics = {
       enable = true;
@@ -70,6 +66,8 @@
       ];
     };
   };
+
+  services.fstrim.enable = true;
 
   # Recommended to explicitly declare video driver for Xorg and fallback support
   services.xserver.videoDrivers = ["amdgpu"];
