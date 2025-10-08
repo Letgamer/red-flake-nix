@@ -454,9 +454,6 @@
           modules = [
             darkmatter-grub-theme.nixosModule
             inputs.impermanence.nixosModules.impermanence
-            inputs.hardware.nixosModules.common-cpu-intel-cpu-only
-            inputs.hardware.nixosModules.common-gpu-amd
-            inputs.hardware.nixosModules.common-pc-ssd
 
             ./nixos/hosts/redline
             {
