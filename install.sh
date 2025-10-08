@@ -20,7 +20,7 @@ fi
 
 # define variables
 LOGFILE="/mnt/nixos_install.log"
-FLAKE="github:Red-Flake/red-flake-nix"
+FLAKE="github:Letgamer/red-flake-nix"
 GIT_REV="main"
 
 # define colors
